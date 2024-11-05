@@ -10,3 +10,4 @@ Grupo de estudos de visão computacional do segundo semestre de 2024. O foco do 
 | 17/09 | [Fundamentos de Redes Neurais](./presentations/03%20-%20Neural%20Networks/) | Arthur Ramos, Henrique Drago |
 | 24/09 | [Redes Neurais Convolucionais](./presentations/04%20-%20Convolutional%20Neural%20Networks/) |Pedro Lucas, Arthur Ramos |
 | 01/10 | [Atividades Práticas](./presentations/05%20-%20Pratica/) |Fabio Cavaleti |
+| 05/11 | [Detecção de Objetos](./presentations/06%20-%20Object%20Detection/) |Fabio Cavaleti |
