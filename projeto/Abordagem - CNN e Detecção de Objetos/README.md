@@ -12,8 +12,20 @@ O processo de desenvolvimento do projeto para esta abordagem tem 2 pontos princi
 
 - Construir, treinar e testar uma rede neural CNN para classificação das imagens geradas pela etapa anterior
 
-Para o primeiro objetivo, foi utilizado o dataset presente no seguinte link: https://universe.roboflow.com/gomes-project/projeto-libras/dataset/21. Nele, temos conjuntos de imagens para treino, teste e validação, as quais estão divididas em 35 classes. Para a detecção, utilizamos o framework CVZone junto a bibliotecas tradicionais de Python, como Numpy, Pandas e OpenCV.
+Para o primeiro objetivo, foi utilizado o dataset presente no seguinte link: https://universe.roboflow.com/gomes-project/projeto-libras/dataset/21. Nele, temos conjuntos de imagens para treino, teste e validação, as quais estão divididas em 35 classes. Para a detecção, utilizamos o framework CVZone (https://github.com/cvzone/cvzone) junto a bibliotecas tradicionais de Python, como Numpy, Pandas e OpenCV.
 
 Para a etapa da rede neural, utilizamos o ambiente do Google Colab para executar os processos necessários. Com o auxílio da biblioteca Pytorch, construímos uma CNN e realizamos seu treinamento e teste.
 
 ## Arquivos
+
+- **preProcessing.py**: itera sobre as imagens do dataset, realiza os ajustes necessários e cria novas imagens.
+
+- **handDetection.py**: toma as imagens passadas pelo preProcessing.py e determina, a partir de um algoritmo do CVZone, as coordenadas do bounding box que comporta as mãos.
+
+- **signLanguageModel.ipynb**: manipula o dataset e desenvolve uma rede neural.
+
+## Resultado
+
+Ao final das etapas de processamento dos dados e treinamento/teste do modelo de aprendizado de máquina, obteve-se uma precisão média de 95% sobre o dataset de teste, o que representa um resultado positivo ao comportamento do modelo.
+
+
