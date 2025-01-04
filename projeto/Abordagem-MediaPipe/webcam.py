@@ -14,6 +14,13 @@ connections_style = mp_draw.DrawingSpec(color=(0, 255, 0))
 
 video = cv2.VideoCapture(0)
 
+palavras = [
+    "A", "Ajuda", "B", "Banheiro", "C", "Cade", "Casa", "D", "E", "Em pe",
+    "Eu", "F", "Febre", "G", "Gosto", "I", "L", "M", "N", "O", "P",
+    "Policial", "Q", "R", "S", "T", "Te amo", "Telefone", "Tenho", "U",
+    "V", "Vacina", "Voce", "W", "Y"
+]
+
 while True:
     ok, frame = video.read()
     if not ok:
@@ -28,8 +35,9 @@ while True:
             hand_row = list(np.array([[landmark.x, landmark.y, landmark.z] for landmark in hand]).flatten())
        
             X = pd.DataFrame([hand_row])
-            hand_class = model.predict(X)[0]
-            cv2.putText(frame, str(hand_class), (0,100), cv2.FONT_HERSHEY_COMPLEX, 1, (0,255,0), 2)
+            hand_classe = model.predict(X)[0]
+            classe = palavras[int(hand_classe)]
+            cv2.putText(frame, classe, (0,100), cv2.FONT_HERSHEY_COMPLEX, 1, (0,255,0), 2)
             
     cv2.imshow("Video", frame)
     
